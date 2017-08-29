@@ -827,4 +827,27 @@ public class WechatApi {
         }
     }
 
+    public JsonArray getMemberList() {
+        return memberList;
+    }
+
+    public int getMemberCount() {
+        return memberCount;
+    }
+
+    public JsonArray getContactList() {
+        return contactList;
+    }
+
+    public JsonArray getGroupList() {
+        return groupList;
+    }
+
+    public Map<String, JsonArray> getGroupMemeberList() {
+        return groupMemeberList;
+    }
+
+    public Map<String, Object> getUser() {
+        return user;
+    }
 }

@@ -217,6 +217,8 @@ public class StartUI extends WechatApi {
             String      content     = msg.get("Content").getAsString().replace("&lt;", "<").replace("&gt;", ">");
             UserMessage userMessage = new UserMessage(this);
             userMessage.setRawMsg(msg);
+            userMessage.setFromUserName(userMessage.getRawMsg().get("FromUserName").getAsString());
+            userMessage.setToUserName(userMessage.getRawMsg().get("ToUserName").getAsString());
 
             // 文本groupMessage
             if (conf.get("MSGTYPE_TEXT").equals(msgType)) {
